@@ -25,13 +25,13 @@ jobs:
 
     steps:
     # WARNING: Needed due to GitHub Actions disk space regression on Linux runners
-    - name: Obtain maximum storage
-      run: |
-        sudo swapoff -a
-        sudo rm -f /swapfile
-        sudo apt clean
-        docker rmi $(docker image ls -aq)
-        df -h
+    #- name: Obtain maximum storage
+    #  run: |
+    #    sudo swapoff -a
+    #    sudo rm -f /swapfile
+    #    sudo apt clean
+    #    docker rmi $(docker image ls -aq)
+    #    df -h
     - uses: actions/checkout@v2.5.0
       with:
         fetch-depth: 0
